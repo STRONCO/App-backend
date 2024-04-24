@@ -46,7 +46,7 @@ const actualizarPaciente = async (req, res) => {
   if (paciente.nutriologo._id.toString() !== req.nutriologo._id.toString()) {
     return res.json({ msg: "Accion no valida" });
   }
-  console.log(req.files);
+  //console.log(req.files);
   // try {
   //   if (req.files?.imagen) {
   //     const result = await uploadImage(req.files.imagen.tempFilePath);

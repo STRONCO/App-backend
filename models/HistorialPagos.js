@@ -25,6 +25,10 @@ const historialPagoSchema = mongoose.Schema({
     type: String,
     required: false,
   },
+  vencimiento:{
+    type: Date,
+    required: true,
+  }
 
 });
 

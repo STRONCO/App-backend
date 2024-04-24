@@ -3,13 +3,14 @@ import Paciente from "../models/Paciente.js";
 
 const guardarPago = async (req, res) => {
   try {
-    const { id, nombre, anticipo, formadepago, adeudoneto } = req.body;
+    const { id, nombre, anticipo, formadepago, adeudoneto, fechavencimiento } = req.body;
     const pago = new HistorialPagos({
       clienteId: id,
       clienteNombre: nombre,
       monto: anticipo,
       formaPago: formadepago,
-      deudanetaHisto: adeudoneto
+      deudanetaHisto: adeudoneto,
+      vencimiento: fechavencimiento,
     });
     await pago.save();
     res.status(201).json({ mensaje: "Pago guardado correctamente" });
